@@ -3,16 +3,140 @@
     <head>
         <meta charset="utf-8" />
         <title>イスを運ぶロボット「ibot（イボット）」</title>
-
+        
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111023928-1"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-111023928-1');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-111023928-1');
         </script>
+
+        <style>
+            * {
+                margin: 0;
+            }
+            body {
+                background: #fff;
+                color: #212121;
+            }
+
+            .hero {
+                position: relative;
+                height: 100vh;
+                max-height: 100vw;
+                overflow: hidden;
+            }
+            .hero__title {
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(0,0,0,0.5);
+            }
+            .hero__title__image {
+                max-width: 50vw;
+                max-height: 50vh;
+            }
+            .hero__video {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                transform: translate(-50%,-50%);
+                min-width: 200vw;
+                min-height: 200vh;
+            }
+
+            .content {
+                padding: 3rem 0;
+            }
+            .content__title {
+                margin-bottom: 2rem;
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            .members__list {
+                display: flex;
+                align-items: center;
+                list-style: none;
+            }
+            .members__item {
+                flex: 1;
+                margin: 5rem auto;
+                text-align: center;
+            }
+            .members__item__image {
+                height: 100px;
+                width: 100px;
+                border-radius: 50px;
+                box-shadow: 0 2px 4px 2px rgba(0,0,0,.1)
+            }
+            .members__item__name {
+                margin-top: 1rem;
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+
+            .members {
+                margin: 1rem 0;
+            }
+            .members__title {
+                margin: 3rem 0 2rem;
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            .contact {
+                background: #212121;
+                color: #fff;
+                text-align: center;
+            }
+            .content__form {
+                margin: 0 auto;
+                width: 900px;
+                max-width: 90vw;
+                height: 80vh;
+                border-radius: 8px;
+            }
+        </style>
     </head>
     <body>
-        <h1>イスを運ぶロボット「ibot（イボット）」</h1>
+        <div class="hero">
+            <h1 class="hero__title">
+                <img class="hero__title__image" src="./src/images/title.png" alt="イスを運ぶロボット「ibot（イボット）」" />
+            </h1>
+            <video class="hero__video" src="./src/videos/demo.mp4" autoplay loop muted poster=""></video>
+        </div>
+
+        <div class="content members">
+            <h2 class="content__title">Members</h2>
+
+            <ul class="members__list">
+                <li class="members__item">
+                    <img class="members__item__image" src="./src/images/tsuboi_shunsuke.jpg" alt="" />
+                    <p class="members__item__name">坪井俊輔</p>
+                </li>
+                <li class="members__item">
+                    <img class="members__item__image" src="./src/images/narita_keisuke.jpg" alt="" />
+                    <p class="members__item__name">なりたけいすけ</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content contact">
+            <h2 class="content__title">お問い合わせ</h2>
+
+            <iframe class="content__form" src="https://docs.google.com/forms/d/e/1FAIpQLSc1nuJvMP1LrO6gQwYxN0_oW0OjHVy_ebiNy8YtYh4Aq_NLig/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+        </div>
     </body>
 </html>
