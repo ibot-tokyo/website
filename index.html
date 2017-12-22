@@ -16,6 +16,10 @@
             * {
                 margin: 0;
             }
+            ul {
+                list-style: none;
+            }
+
             body {
                 background: #fff;
                 color: #212121;
@@ -54,19 +58,29 @@
             }
 
             .content {
-                padding: 3rem 0;
+                padding: 5vw 0;
+            }
+            .content:nth-child(2n+1) {
+                background: #212121;
+                color: #fff;
             }
             .content__title {
-                margin-bottom: 2rem;
+                margin-bottom: 3vw;
                 text-align: center;
                 font-size: 2.5rem;
                 font-weight: bold;
             }
 
+            .news__item {
+                display: flex;
+                justify-content: center;
+            }
+            .news__item__date {
+                margin-right: 3em;
+            }
+
             .members__list {
                 display: flex;
-                align-items: center;
-                list-style: none;
             }
             .members__item {
                 flex: 1;
@@ -86,9 +100,6 @@
                 letter-spacing: 2px;
             }
 
-            .members {
-                margin: 1rem 0;
-            }
             .members__title {
                 margin: 3rem 0 2rem;
                 text-align: center;
@@ -97,8 +108,6 @@
             }
 
             .contact {
-                background: #212121;
-                color: #fff;
                 text-align: center;
             }
             .content__form {
@@ -118,16 +127,29 @@
             <video class="hero__video" src="./src/videos/demo.mp4" autoplay loop muted poster=""></video>
         </div>
 
+        <div class="content news">
+            <h2 class="content__title">News</h2>
+
+            <ul class="news__list">
+                <li>
+                    <dl class="news__item">
+                        <dt class="news__item__date">2017.12.16</dt>
+                        <dd class="news__item__text">ibotがハードウェアコンテスト GUGEN2017で<a href="https://gugen.jp/2017contest-result" target="_blank" rel="noopener noreferrer">アレイ賞</a>を受賞しました。</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+
         <div class="content members">
             <h2 class="content__title">Members</h2>
 
             <ul class="members__list">
                 <li class="members__item">
-                    <img class="members__item__image" src="./src/images/tsuboi_shunsuke.jpg" alt="" />
+                    <img class="members__item__image" src="./src/images/tsuboi_shunsuke.jpg" width="100" height="100" alt="" />
                     <p class="members__item__name">坪井俊輔</p>
                 </li>
                 <li class="members__item">
-                    <img class="members__item__image" src="./src/images/narita_keisuke.jpg" alt="" />
+                    <img class="members__item__image" src="./src/images/narita_keisuke.jpg" width="100" height="100" alt="" />
                     <p class="members__item__name">なりたけいすけ</p>
                 </li>
             </ul>
